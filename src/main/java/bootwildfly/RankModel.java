@@ -1,0 +1,49 @@
+package bootwildfly;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class RankModel {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String username;
+	private Long score;
+
+	public RankModel() {
+	}
+
+	public RankModel(String username, Long score) {
+		this.username = username;
+		this.score = score;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Long getScore() {
+		return score;
+	}
+
+	public void setScore(Long score) {
+		this.score = score;
+	}
+
+}
