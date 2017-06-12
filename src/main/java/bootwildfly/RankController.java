@@ -3,6 +3,7 @@ package bootwildfly;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,9 +17,9 @@ public class RankController {
 	public RankController() {
 	}
 	
-    @RequestMapping(method = RequestMethod.PUT)
-    public RankModel update(Long id, RankModel entity){
-        return service.update(id, entity);
+    @RequestMapping(method = RequestMethod.POST)
+    public RankModel update(@RequestBody RankModel entity){
+        return service.update(entity);
     }
     
     @RequestMapping(method = RequestMethod.GET)

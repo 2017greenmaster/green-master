@@ -2,7 +2,7 @@ package bootwildfly;
 
 public class RankModel {
 
-	private Long id;
+	private Integer id;
 	private String username;
 	private Long score;
 
@@ -14,11 +14,11 @@ public class RankModel {
 		this.score = score;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
