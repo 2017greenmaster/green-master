@@ -1,9 +1,9 @@
 package bootwildfly;
 
-import java.util.Optional;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RankRepo extends JpaRepository<RankModel, Long> {
-	Optional<RankModel> findOneById(Long id);
+public class RankRepo {
+	public static List<RankModel> collection = new ArrayList<>();
 }
