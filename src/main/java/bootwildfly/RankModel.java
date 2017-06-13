@@ -4,14 +4,14 @@ public class RankModel {
 
 	private Integer id;
 	private String username;
-	private Long score;
+	private Long points;
 
 	public RankModel() {
 	}
 
-	public RankModel(String username, Long score) {
+	public RankModel(String username, Long points) {
 		this.username = username;
-		this.score = score;
+		this.points = points;
 	}
 
 	public Integer getId() {
@@ -30,12 +30,12 @@ public class RankModel {
 		this.username = username;
 	}
 
-	public Long getScore() {
-		return score;
+	public Long getPoints() {
+		return points;
 	}
 
-	public void setScore(Long score) {
-		this.score = score;
+	public void setPoints(Long points) {
+		this.points = points;
 	}
 
 	@Override
