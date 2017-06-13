@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class RankService {
 
 	public List<RankModel> getAll() {
-		RankRepo.collection.sort((o1, o2)->o1.getPoints().compareTo(o2.getPoints()));
+		RankRepo.collection.sort((o1, o2)-> o2.getPoints().compareTo(o1.getPoints()));
 		return RankRepo.collection;
 	}
 
